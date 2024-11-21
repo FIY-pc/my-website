@@ -57,6 +57,63 @@ body {
     color: #007BFF;
 }
 
+/*首页欢迎样式*/
+.welcome_arrow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+}
+
+.welcome_arrow button{
+    height: 40px;
+    background: none;
+    border: none;
+    outline: none;
+}
+.welcome_arrow button img {
+    height: 40px;
+}
+
+.welcome_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 50px;  /* 距离顶部50px */
+    left: 50%;
+    transform: translateX(-50%);  /* 水平居中 */
+    width: 60%;  /* 容器宽度 */
+    max-height: 1000px;  /* 初始状态下不限制高度 */
+    overflow: hidden;  /* 内容超出时隐藏 */
+    background: none;
+    padding: 20px;  /* 适当的内边距 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out, padding 0.5s ease-in-out;
+}
+
+.welcome_container h1,
+.welcome_container p {
+    background: none;
+    color: #d5d0d0;
+    font-size: 30px;
+    text-align: center;
+    margin: 0;
+    padding: 10px 30px;
+}
+
+.welcome_container h1 {
+    font-size: 60px;
+}
+
+.welcome_container.collapsed {
+    max-height: 0;  /* 收起时高度为0 */
+    opacity: 0;  /* 收起时透明度为0 */
+    padding: 0;  /* 收起时内边距为0 */
+}
+
+
 /* 响应式设计 */
 @media (max-width: 768px) {
     .navbar {
@@ -73,4 +130,15 @@ body {
     .navbar-right ul li {
         margin-top: 10px;
     }
+}
+/*浮动动画*/
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(10px); }
+    100% { transform: translateY(0px); }
+}
+
+.float-ud {
+    background: none;
+    animation: float 4s ease-in-out infinite;
 }
