@@ -7,4 +7,4 @@
 - 请移步我的博客
 
 [博客](https://fiy-pc.github.io/)
-[进入笔记库](home.md)
+[进入笔记库](./home.md)
