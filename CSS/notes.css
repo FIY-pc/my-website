@@ -1,3 +1,7 @@
 body{
     background-image: url("../images/bg_notes.jpg");
+    background-color: #3d3d45;
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
 }
