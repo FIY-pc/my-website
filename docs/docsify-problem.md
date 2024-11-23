@@ -32,6 +32,7 @@ docsify的封面md，侧边栏md等文件默认以下划线开头的本意是为
 
 假设我们去掉下划线之后的**目录结构**如下：
 
+```shell
 my-website
 │
 ├── index.html         // 首页
@@ -41,6 +42,10 @@ my-website
     ├── home.md        // 首页md
     ├── sidebar.md    // 侧边栏md
     └── [其他 md 文件]
+
+```
+
+
 
 然后我们把特殊位置所需的md路径重新指定到重命名后的md：
 
