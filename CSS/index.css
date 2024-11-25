@@ -57,20 +57,21 @@ body {
     color: #007BFF;
 }
 
-/*首页欢迎样式*/
-.welcome_arrow{
+/* 首页欢迎样式 */
+.welcome_arrow {
     display: flex;
     justify-content: center;
     align-items: center;
     background: none;
 }
 
-.welcome_arrow button{
+.welcome_arrow button {
     height: 40px;
     background: none;
     border: none;
     outline: none;
 }
+
 .welcome_arrow button img {
     height: 40px;
 }
@@ -113,32 +114,147 @@ body {
     padding: 0;  /* 收起时内边距为0 */
 }
 
-
 /* 响应式设计 */
+@media (max-width: 1200px) {
+    .navbar-right ul {
+        gap: 15px;
+    }
+
+    .welcome_container {
+        width: 80%;
+    }
+
+    .welcome_container h1 {
+        font-size: 50px;
+    }
+
+    .welcome_container p {
+        font-size: 20px;
+    }
+}
+
 @media (max-width: 768px) {
+    /* 导航栏调整为垂直排列 */
     .navbar {
         flex-direction: column;
         align-items: flex-start;
+        padding: 10px;
+    }
+
+    .navbar-left .logo {
+        font-size: 24px;
     }
 
     .navbar-right ul {
         flex-direction: column;
         align-items: flex-start;
         width: 100%;
+        padding: 0;
     }
 
     .navbar-right ul li {
         margin-top: 10px;
     }
+
+    .welcome_container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .welcome_container h1 {
+        font-size: 40px;
+    }
+
+    .welcome_container p {
+        font-size: 18px;
+    }
 }
-/*浮动动画*/
+
+/* 更小屏幕的优化（手机屏幕） */
+@media (max-width: 480px) {
+    .navbar-left .logo {
+        font-size: 20px;
+    }
+
+    .navbar-right ul li a {
+        font-size: 14px;
+    }
+
+    .welcome_container {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .welcome_container h1 {
+        font-size: 30px;
+    }
+
+    .welcome_container p {
+        font-size: 16px;
+    }
+
+    .welcome_arrow button img {
+        height: 30px;
+    }
+}
+
+/* 浮动动画 */
 @keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(10px); }
-    100% { transform: translateY(0px); }
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
 }
 
 .float-ud {
     background: none;
     animation: float 4s ease-in-out infinite;
 }
+
+/* 底栏样式 */
+.footer {
+    background-color: #e47426;  /* 偏黑色背景 */
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    position: fixed;  /* 固定在页面底部 */
+    bottom: 0;  /* 固定在底部 */
+    left: 0;  /* 确保从屏幕左边开始 */
+    width: 100%;  /* 宽度占满整个屏幕 */
+    font-size: 14px;
+    z-index: 1000;  /* 确保底栏在其他内容之上 */
+}
+
+/* 底栏的响应式 */
+@media (max-width: 768px) {
+    .footer {
+        padding: 15px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 10px;
+        font-size: 10px;
+    }
+}
+
+
+.footer a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer a:hover {
+    color: #007BFF;
+}
+
