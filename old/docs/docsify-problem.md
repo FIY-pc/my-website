@@ -10,11 +10,11 @@
 
 可以看到下方明显没加载_coverpage.md
 
-![异常页面1](./images/docsify-problem/docsify-problem-1.png)
+![异常页面1](images/docsify-problem/docsify-problem-1.png)
 
 _home.md也没加载
 
-![异常页面2](./images/docsify-problem/docsify-problem-2.png)
+![异常页面2](images/docsify-problem/docsify-problem-2.png)
 
 
 
@@ -59,6 +59,6 @@ window.$docify = {
 
 这样问题就解决了，再次部署发现页面已能正常使用
 
-![正常页面1](./images/docsify-problem/docsify-problem-3.png)
+![正常页面1](images/docsify-problem/docsify-problem-3.png)
 
-![正常页面1](./images/docsify-problem/docsify-problem-4.png)
+![正常页面1](images/docsify-problem/docsify-problem-4.png)
