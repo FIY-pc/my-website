@@ -1,0 +1,106 @@
+/* 重置默认样式 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* 让 html 和 body 占满整个页面 */
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+/* 背景和全局布局 */
+.app {
+    font-family: 'Arial', sans-serif;
+    background-color: #3d3d45;
+    background-image: url("../../public/images/bg_tools.jpg");
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    height: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    overflow: hidden; /* 防止出现滚动条 */
+}
+
+/* 主容器 */
+.container {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    width: 100%; /* 让容器宽度为 100% */
+    max-width: 100%; /* 防止最大宽度限制 */
+    padding: 20px;
+}
+
+/* 左侧区域 */
+.left-column {
+    width: 40%;
+    padding: 20px;
+}
+
+/* 右侧区域 */
+.right-column {
+    width: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* 每个方块样式 */
+.square-box {
+    width: 200px;
+    height: 200px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    margin: 10px;
+    text-decoration: none;
+}
+
+.square-box:hover {
+    transform: scale(1.05);
+}
+
+/* 方块网格 */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 每行 2 列 */
+    gap: 20px;
+    justify-items: center;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left-column, .right-column {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr; /* 在小屏幕上使用单列布局 */
+    }
+}
+
+.time-display{
+    font-size: 50px;
+}
+
+.blessing-message{
+    font-size: 30px;
+}

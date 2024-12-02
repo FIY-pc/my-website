@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 设置字体和背景 */
+.index-page {
+    font-family: 'Arial', sans-serif;
+    background-color: #3d3d45;
+    background-image: url("../../public/images/bg_index.jpg");
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+
+/* 首页欢迎样式 */
+.welcome_arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+}
+
+.welcome_arrow button {
+    height: 40px;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.welcome_arrow button img {
+    height: 40px;
+}
+
+.welcome_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 50px;  /* 距离顶部50px */
+    left: 50%;
+    transform: translateX(-50%);  /* 水平居中 */
+    width: 60%;  /* 容器宽度 */
+    max-height: 1000px;  /* 初始状态下不限制高度 */
+    overflow: hidden;  /* 内容超出时隐藏 */
+    background: none;
+    padding: 20px;  /* 适当的内边距 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out, padding 0.5s ease-in-out;
+}
+
+.welcome_container h1,
+.welcome_container p {
+    background: none;
+    color: #d5d0d0;
+    font-size: 30px;
+    text-align: center;
+    margin: 0;
+    padding: 10px 30px;
+}
+
+.welcome_container h1 {
+    font-size: 60px;
+}
+
+.welcome_container.collapsed {
+    max-height: 0;  /* 收起时高度为0 */
+    opacity: 0;  /* 收起时透明度为0 */
+    padding: 0;  /* 收起时内边距为0 */
+}
+
+/* 响应式设计 */
+@media (max-width: 1200px) {
+    .welcome_container {
+        width: 80%;
+    }
+
+    .welcome_container h1 {
+        font-size: 50px;
+    }
+
+    .welcome_container p {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .welcome_container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .welcome_container h1 {
+        font-size: 40px;
+    }
+
+    .welcome_container p {
+        font-size: 18px;
+    }
+}
+
+/* 更小屏幕的优化（手机屏幕） */
+@media (max-width: 480px) {
+    .welcome_container {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .welcome_container h1 {
+        font-size: 30px;
+    }
+
+    .welcome_container p {
+        font-size: 16px;
+    }
+
+    .welcome_arrow button img {
+        height: 30px;
+    }
+}
+
+/* 浮动动画 */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.float-ud {
+    background: none;
+    animation: float 4s ease-in-out infinite;
+}
+
+.welcome_container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.fade-in-text {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in-text:nth-child(1) {
+    animation-delay: 0.5s;
+}
+
+.fade-in-text:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.fade-in-text:nth-child(3) {
+    animation-delay: 1.5s;
+}
+
+.fade-in-text:nth-child(4) {
+    animation-delay: 2s;
+}
+
+.fade-in-text:nth-child(5) {
+    animation-delay: 2.5s;
+}
+

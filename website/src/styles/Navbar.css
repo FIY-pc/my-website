@@ -1,0 +1,79 @@
+/* 导航栏样式 */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100vw; /* 确保导航栏占满整个宽度 */
+}
+
+/* 导航栏左侧 logo 样式 */
+.navbar-left .logo {
+    font-size: 1.2rem;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* 导航栏右侧链接样式 */
+.navbar-right ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.navbar-right ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.navbar-left a:hover{
+    color: #007bff;
+}
+
+.navbar-right ul li a:hover {
+    color: #007bff;
+}
+
+@media (max-width: 1200px) {
+    .navbar-right ul {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* 导航栏调整为垂直排列 */
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .navbar-left .logo {
+        font-size: 24px;
+    }
+
+    .navbar-right ul {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        padding: 0;
+    }
+
+    .navbar-right ul li {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-left .logo {
+        font-size: 20px;
+    }
+
+    .navbar-right ul li a {
+        font-size: 14px;
+    }
+}
